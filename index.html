@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar V Kurane - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(244, 244, 244);
+            color: #333; /* Dark text color for readability */
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            border: 8px double #18bc9c; /* Double border with a vibrant color */
+            margin: 0 auto;
+            max-width: 1200px;
+            background-image: linear-gradient(to bottom right, #f9f9f9, #f0f0f0); /* Soft gradient background */
+            scroll-behavior: smooth; /* Smooth scroll */
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #18bc9c;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .hero .btn {
+            background-color: #18bc9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #16a085;
+        }
+
+        /* Section Title Styling */
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        /* General Section Styling */
+        .about,
+        .skills,
+        .projects,
+        .contact,
+        .resume {
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: rgb(230, 226, 226);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about p,
+        .skills ul,
+        .projects ul,
+        .contact p {
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .skills ul,
+        .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li,
+        .projects ul li {
+            margin: 10px 0;
+            padding: 5px 0;
+            font-size: 16px;
+        }
+
+        /* Resume Specific Styling */
+        .resume-wrapper {
+            border: 5px double #2c3e50;
+            padding: 30px;
+            background-color: white;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .left-column {
+            width: 58%;
+            padding-right: 20px;
+            border-right: 2px solid #ccc;
+        }
+
+        .right-column {
+            width: 37%;
+            padding-left: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2,
+        h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        hr {
+            border: 0;
+            border-top: 3px solid #18bc9c;
+            margin: 20px 0;
+            width: 80%;
+            margin-left: 0;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero .btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .about p,
+            .skills ul,
+            .projects ul,
+            .contact p {
+                font-size: 16px;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .left-column,
+            .right-column {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 0;
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Omkar V Kurane</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm Omkar, a passionate Web Developer skilled in Frontend and Backend development. Explore my work and projects to learn more about my expertise and experience.</p>
+        <a href="#resume" class="btn">View Resume</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a web developer with a strong background in building dynamic and responsive websites and applications. I specialize in both frontend and backend development, with experience in various technologies such as HTML, CSS, JavaScript, Node.js, and more. My goal is to create intuitive, user-friendly web experiences.
+        </p>
+        <p>
+            Outside of coding, I am passionate about learning new technologies, solving complex problems, and contributing to open-source projects. I am always eager to grow professionally and learn from others in the tech community.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li>Frontend Development: HTML, CSS, JavaScript, React</li>
+            <li>Backend Development: Node.js, Express.js, MongoDB</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Responsive Web Design</li>
+            <li>API Development</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li><strong>Project 1:</strong> A fully responsive e-commerce website built with React and Node.js.</li>
+            <li><strong>Project 2:</strong> A real-time chat application using WebSocket and Express.js.</li>
+            <li><strong>Project 3:</strong> A personal portfolio website showcasing my work and skills.</li>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume" id="resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-wrapper">
+            <div class="main-content">
+                <div class="left-column">
+                    <img src="omkar.jpg" alt="Omkar V Kurane" class="profile-image">
+                    <h3>Omkar V Kurane</h3>
+                    <p><strong>Experience:</strong> Fresher and Student from 3rd Year, Computer Science Department, Marath Mandal Engineering College, Belagavi.</p>
+
+                    <h3>Professional Experience</h3>
+                    <ul>
+                        <li><strong>Web Developer</strong> - Company ABC (2022-Present)</li>
+                        <li><strong>Frontend Developer Intern</strong> - Company XYZ (2021-2022)</li>
+                    </ul>
+
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Node.js</li>
+                        <li>Database Management (MySQL, MongoDB)</li>
+                        <li>Version Control (Git, GitHub)</li>
+                    </ul>
+
+                    <hr>
+
+                    <h3 class="section-title">Projects</h3>
+                    <ul>
+                        <li><strong>Project One:</strong> E-commerce Website - Built a fully responsive e-commerce platform with React and Node.js.</li>
+                        <li><strong>Project Two:</strong> Portfolio Website - Designed and developed a personal portfolio using HTML, CSS, and JavaScript.</li>
+                    </ul>
+
+                    <h3 class="section-title">Education</h3>
+                    <ul>
+                        <li><strong>Bachelor's in Computer Science</strong> - University VTU(2022-2026)</li>
+                    </ul>
+
+                    <h3 class="section-title">Certifications</h3>
+                    <ul>
+                        <li>React Developer Certification - Codecademy</li>
+                        <li>Full Stack Web Development - Coursera</li>
+                        <li>CPP - Coursera</li>
+                    </ul>
+                </div>
+
+                <div class="right-column">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: omkar@example.com</li>
+                        <li>Phone: +1234567890</li>
+                        <li>LinkedIn: <a href="https://linkedin.com/in/omkarkurane" target="_blank">linkedin.com/in/omkarkurane</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>If you would like to get in touch, feel free to <a href="mailto:omkar@example.com">email me</a> or follow me on my social media accounts below:</p>
+        <p>
+            <a href="https://www.linkedin.com/in/omkarkurane" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/omkarkurane" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Omkar V Kurane. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
+
+
+
